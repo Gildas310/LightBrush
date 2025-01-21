@@ -108,7 +108,7 @@ namespace TiltBrush
 
         private void OnLanguageChanged(Locale newLocale)
         {
-            updateDisplay = true;
+            updateDisplay = false;
         }
 
         public async void RetrieveUsername()

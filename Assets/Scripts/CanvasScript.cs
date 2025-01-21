@@ -151,13 +151,14 @@ namespace TiltBrush
         void Update()
         {
 #if UNITY_EDITOR
-            // All changes must go through .Pose accessor
-            if (transform.hasChanged)
-            {
-                Debug.LogError("Detected unsanctioned change to transform");
-                transform.hasChanged = false;
-            }
+    // All changes must go through .Pose accessor
+    // if (transform.hasChanged)
+    // {
+    //     Debug.LogError("Detected unsanctioned change to transform");
+    //     transform.hasChanged = false;
+    // }
 #endif
+
             m_BatchManager.Update();
         }
 
