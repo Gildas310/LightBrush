@@ -175,7 +175,7 @@ jobs:
           else
             echo 'flavors=[{"development": false}]' >> $GITHUB_OUTPUT
           fi
-        - name: Checkout code
+      - name: Checkout code
     uses: actions/checkout@v3
     with:
       fetch-depth: 0  # Clone tout l'historique Git
