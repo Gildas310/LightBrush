@@ -9,6 +9,10 @@
 Packages/*.json text eol=lf
 UnityPackageManager/manifest.json text eol=lf
 ProjectSettings/ProjectVersion.txt text eol=lf
+UserSettings/Layouts/default-2022.dwlt text eol=lf
+UserSettings/Search.index text eol=lf
+UserSettings/Search.settings text eol=lf
+
 
 # Resharper generates these with LF; keep them LF even on Windows
 *.DotSettings text eol=lf
