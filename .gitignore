@@ -3,6 +3,7 @@
 Packages/*
 !Packages/manifest.json
 !Packages/packages-lock.json
+!Assets/CustomPackages/GrandSebCameraPath/
 
 # Ignorer les fichiers temporaires Unity
 /Temp/
