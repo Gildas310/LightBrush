@@ -13,6 +13,12 @@
 /DevOptions.json
 /UserSettings
 
+# Ignorer les fichiers volumineux
+Assets/Prefabs/Intro/openbrush_intro_full.prefab
+Assets/Prefabs/Intro/powered_by_tiltbrush_full.prefab
+Assets/Resources/Cubemaps/milkyway.psd
+Support/ThirdParty/ffmpeg/bin/ffmpeg
+
 *.pyc
 .DS_Store
 *.bak
