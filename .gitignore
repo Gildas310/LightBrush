@@ -1,4 +1,10 @@
-# Standard unity stuff
+# Unity Package Manager
+# Ignorer le dossier Packages sauf manifest.json et packages-lock.json
+Packages/*
+!Packages/manifest.json
+!Packages/packages-lock.json
+
+# Ignorer les fichiers temporaires Unity
 /Temp/
 /Obj/
 /Build/
