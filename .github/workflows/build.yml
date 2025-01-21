@@ -57,7 +57,8 @@ jobs:
         with:
           fetch-depth: 0
           lfs: true  # We don't use LFS, but it adds no time, and leave it here in case we do at some point later
-
+      - name: Skip pre-commit checks
+        run: git config core.hooksPath /dev/null
       - name: Calculate version and stamp
         id: version
         run: |
