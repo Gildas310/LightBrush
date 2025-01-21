@@ -1,4 +1,4 @@
-name: Simplified Workflow
+name: Simplified Workflow Without Pre-Commit
 
 on:
   push:
@@ -19,11 +19,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Étape 2 : Désactiver les hooks pre-commit
-      - name: Skip pre-commit checks
-        run: git config core.hooksPath /dev/null
-
-      # Étape 3 : Calculer la version et le tag
+      # Étape 2 : Calculer la version et le tag
       - name: Calculate version
         id: version
         run: |
@@ -33,11 +29,11 @@ jobs:
           VERSION="${MAJOR_MINOR}.${PATCH_VERSION}"
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
-      # Étape 4 : Afficher la version pour le débogage
+      # Étape 3 : Afficher la version pour le débogage
       - name: Debug version
         run: |
           echo "Calculated version: ${{ steps.version.outputs.version }}"
 
-      # Étape 5 : Vérification de code (exemple simple)
+      # Étape 4 : Linting (ou autre tâche légère)
       - name: Lint code
         run: echo "Running linting checks (placeholder)."
