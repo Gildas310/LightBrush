@@ -27,6 +27,7 @@ jobs:
       - name: Calculate version
         id: version
         run: |
+          echo "Calculating version..."
           MAJOR_MINOR=$(git describe --tags --abbrev=0 --match "v[0-9]*.[0-9]*" || echo "v0.0")
           PATCH_VERSION=$(git log $(git describe --tags --abbrev=0 || echo "HEAD")..HEAD --oneline --first-parent | wc -l)
           VERSION="${MAJOR_MINOR}.${PATCH_VERSION}"
@@ -34,8 +35,9 @@ jobs:
 
       # Étape 4 : Afficher la version pour le débogage
       - name: Debug version
-        run: echo "Calculated version: ${{ steps.version.outputs.version }}"
+        run: |
+          echo "Calculated version: ${{ steps.version.outputs.version }}"
 
-      # Étape 5 : Vérification de code (par exemple, linting ou tests légers)
-      - name: Run lint
-        run: echo "No build steps. Only linting and other checks."
+      # Étape 5 : Vérification de code (exemple simple)
+      - name: Lint code
+        run: echo "Running linting checks (placeholder)."
